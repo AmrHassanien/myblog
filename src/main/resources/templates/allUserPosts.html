@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head lang="en">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>My Blog</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+    <div class="banner">
+        <img src="/images/blog.png">
+            <span  th:text ="#{index.title}"/>
+        </img>
+
+    </div>
+    <div id="main">
+        <div class = "controls">
+            <a th:href="@{${'/post/addpost/'+ user_id}}">Create new Post</a>
+        </div>
+        <div class = "posts">
+            <div class= "user" th:each="post: ${posts}" >
+                <div class = "image">
+                         <img th:src="@{${'/post/image/' + post.id}}" />
+                </div>
+                <div class = "title">
+                 <a th:href="@{${'/post/view/' + post.id}}"> <h1>   <span th:text="${post.title}" /> </h1> </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+</html>

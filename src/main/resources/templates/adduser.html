@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head lang="en">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>My Blog</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+
+    <div id="main">
+
+        <h1> Add new post</h1>
+        <form action="#" th:action="@{/register}" method="post" th:object="${user}">
+            <label>Full name:</label>
+            <input type="text" th:field="*{name}" /><br/>
+
+            <label>E-mail:</label>
+            <input type="text" th:field="*{email}" /><br/>
+
+            <label>Password:</label>
+            <input type="password" th:field="*{password}" /><br/>
+
+            <label>Birthday (yyyy-mm-dd):</label>
+            <input type="text" th:field="*{birthday}" /><br/>
+
+            <label>Gender:</label>
+            <input type="radio" th:field="*{gender}" value="Male" />Male
+            <input type="radio" th:field="*{gender}" value="Female" />Female<br/>
+
+            <label>Profession:</label>
+            <select th:field="*{profession}">
+                <option th:each="p : ${listProfession}" th:value="${p}" th:text="${p}" />
+            </select>
+            <br/>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    </body>
+</html>

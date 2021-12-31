@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>My Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<div id="main">
+
+    <div class="banner">
+        <img src="/images/blog.jpeg"/>
+        <span  th:text ="#{index.title}"/>
+    </div>
+     <form th:action="@{${'/post/savepost/'+ post.user.id}}" method="post" enctype="multipart/form-data">
+    <!--<form action="#" th:action="@{/post/savepost}" method="post" th:object="${post}">-->
+        <label>Title:</label>
+        <input type="text" name="title" /><br/>
+
+        <label>Body:</label>
+        <textarea rows="20" cols="50" name="textbody"></textarea>
+         <br/>
+
+         <label>Image:</label>
+         <input type="file" class="form-control" placeholder="" name="image">
+         <br/>
+
+        <button type="submit">Post</button>
+    </form>
+</div>
+
+</body>
+</html>

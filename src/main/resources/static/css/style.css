@@ -1,0 +1,145 @@
+html,
+body {
+    margin-top: 5px;
+    font-size: 100%;
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+body a {
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+a:hover {
+    text-decoration: none;
+    opacity: .8;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+input[type="button"],
+input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-size: 21px;
+    line-height: 1.9;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin: 0;
+}
+
+input[type="button"],
+input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.banner span {
+  font-size: xx-large;
+  color: wheat;
+  position: relative;
+  left: 37px;
+  top: -80px;
+}
+.banner img{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+.controls {
+  border-block-color: beige;
+  border-style: ridge;
+  padding-left: 50px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.users {
+  margin-top: 7px;
+  border-top: brown;
+  border-top-style: solid;
+}
+.user {
+  margin: 11px;
+  display: block;
+  border-bottom: beige;
+  border-bottom-style: groove;
+}
+#main h2 {
+   margin-top: 39px;
+ }
+ .posts .image {
+   width: 400px;
+   height: 400px;
+ }
+ img {
+   width: inherit;
+   height: inherit;
+ }
+.post .title h1 span {
+  padding-top: 30px;
+}
+.post .title h1 {
+  margin-top: 32px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+#viewpost .posts .post .image{
+    width: 960px;
+}
+
+.date, .author{
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #999;
+    font-family: 'Open Sans', sans-serif;
+}

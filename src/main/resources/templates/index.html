@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head lang="en">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>My Blog</title>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+    <div class="banner">
+        <img src="/images/blog.jpeg"/>
+        <span  th:text ="#{index.title}"/>
+    </div>
+    <div id="main">
+        <div class = "controls">
+            <a href="/adduser">Add new user</a>
+        </div>
+        <h2> Registered Users </h2>
+        <div class = "users">
+            <div class= "user" th:each="user: ${users}" >
+                <div class = "name">
+                 <a th:href="@{${'/viewUser/'+ user.id}}">   <span th:text="${user.name}" /> </a>
+                </div>
+                <div class = "email">
+                    <span th:text="${user.email}" />
+                </div>
+                <div>
+                   <!-- <a th:href="@{/post/showAllByUser/{user_id}(user_id=${user.id}})}"> Show all <s</a> -->
+                    <a th:href="@{${'/post/showAllByUser/' + user.id}}"> show all posts </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    </body>
+</html>
