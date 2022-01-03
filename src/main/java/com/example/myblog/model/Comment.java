@@ -15,6 +15,7 @@ public class Comment {
 
     private String title;
 
+    @Lob
     private String text;
 
     @Temporal(TemporalType.TIMESTAMP)

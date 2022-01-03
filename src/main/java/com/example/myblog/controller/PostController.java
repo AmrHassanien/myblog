@@ -32,13 +32,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-
+/*
+    This controller is responsible to handle all requests related to posts and is mapped to /post url
+ */
 @Controller
 @RequestMapping(path="/post")
 public class PostController {
-
-    @Value("${uploadDir}")
-    private String uploadFolder;
 
     @Autowired
     private PostService postService;

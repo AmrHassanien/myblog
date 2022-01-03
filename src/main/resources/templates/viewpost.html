@@ -13,9 +13,6 @@
 
 </div>
 <div id="viewpost">
-    <div class = "controls">
-        <a th:href="@{${'/post/addpost/'+ user_id}}">Create new Post</a>
-    </div>
     <div class = "posts">
         <div class= "post" >
             <div class = "title">
@@ -38,21 +35,20 @@
         <h2> Write a comment</h2>
         <div class="newComment">
             <form action="#" th:action="@{${'/post/addComment/' + post.id}}" method="post" th:object="${comment}">
-                <label>Name:</label>
+                <label>Name:</label><br/>
                 <input type="text" th:field="*{name}" /><br/>
 
-                <label>Title:</label>
+                <label>Title:</label><br/>
                 <input type="text" th:field="*{title}" /><br/>
 
-                <label>Comment:</label>
-                <input type="text" th:field="*{text}" /><br/>
+                <label>Comment:</label><br/>
+                <textarea rows="5" cols="30" th:field="*{text}"></textarea>
                 <br/>
 
                 <button type="submit">Submit</button>
             </form>
 
         </div>
-
         <h2> Comments </h2>
         <div class="comments">
 
@@ -68,6 +64,7 @@
                 </div>
             </div>
         </div>
+
 
     </div>
 </div>

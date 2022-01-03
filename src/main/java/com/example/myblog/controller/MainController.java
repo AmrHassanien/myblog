@@ -60,6 +60,9 @@ public class MainController implements CommandLineRunner {
         return "user_message";
     }
 
+    /*
+      This is the implementation of CommandlineRunner , to add values to the databases as soon as the application is instantiated
+     */
     @Override
     public void run(String... args) throws Exception {
         userRepository.save(new User(1,"Amr", "amr@mail.com","m"));
