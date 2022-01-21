@@ -29,14 +29,17 @@
 				<scope>import</scope>
 			</dependency>
 			<!-- End of CRNK BOM -->
+			<dependency>
+				<groupId>software.amazon.awssdk</groupId>
+				<artifactId>bom</artifactId>
+				<version>2.16.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -54,11 +57,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -79,10 +77,7 @@
 			<groupId>io.crnk</groupId>
 			<artifactId>crnk-setup-spring-boot2</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>io.crnk</groupId>
-			<artifactId>crnk-data-jpa</artifactId>
-		</dependency>
+
 		<dependency>
 			<groupId>io.crnk</groupId>
 			<artifactId>crnk-data-facet</artifactId>
@@ -137,6 +132,18 @@
 			<artifactId>hibernate-core</artifactId>
 		</dependency>
 		<!-- End of Crnk Dependencies -->
+		<!-- DynamoDB Enhanced -->
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>dynamodb-enhanced</artifactId>
+			<version>2.16.74</version>
+		</dependency>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>dynamodb</artifactId>
+			<version>2.16.74</version>
+		</dependency>
+		<!-- End Of DynamoDB Enhanced -->
 		<!-- TEST scope dependency -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

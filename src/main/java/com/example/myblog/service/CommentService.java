@@ -1,9 +1,7 @@
 package com.example.myblog.service;
 
-import com.example.myblog.model.Comment;
-import com.example.myblog.model.Post;
-import com.example.myblog.repository.CommentRepository;
-import com.example.myblog.repository.PostRepository;
+import com.example.myblog.model.dynamodb.Comment;
+import com.example.myblog.repository.dynamodb.CommentDynamoDbRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.util.DateUtils;
@@ -16,11 +14,22 @@ import java.util.List;
 @Service
 public class CommentService {
 
-    @PersistenceContext
+    @Autowired
+    CommentDynamoDbRepository commentRepository;
+
+    public List<Comment> getAllComments(String postId) {
+
+        return commentRepository.FindByPostId(postId);
+    }
+
+    public void save(Comment comment) {
+        comment.setCreateDate(DateUtils.createNow().getTime().toString());
+        commentRepository.save(comment);
+    }
+   /* @PersistenceContext
     EntityManager entityManager;
     
-    @Autowired
-    CommentRepository commentRepository;
+
 
     public List<Comment> getAllComments(Integer postId){
         Query query = entityManager.createNamedQuery("Comment.findByPostId");
@@ -37,8 +46,5 @@ public class CommentService {
         return (List<Comment>)commentRepository.findAll();
     }
 
-    public void save(Comment comment) {
-        comment.setCreateDate(DateUtils.createNow().getTime());
-        commentRepository.save(comment);
-    }
+    */
 }
